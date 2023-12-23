@@ -75,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 added config so that after the app is running
 can launch the debugger in vsc
+
+### Step 4: Identify where your state should live
