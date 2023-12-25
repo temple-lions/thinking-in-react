@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SearchBar from "./components/SearchBar";
 
 function FilterableProductTable({ products }) {
   const [filterText, setFilterText] = useState("");
@@ -77,32 +78,6 @@ function ProductTable({ products, filterText, inStockOnly }) {
       </thead>
       <tbody>{rows}</tbody>
     </table>
-  );
-}
-
-function SearchBar({
-  filterText,
-  inStockOnly,
-  onFilterTextChange,
-  onInStockOnlyChange,
-}) {
-  return (
-    <form>
-      <input
-        type="text"
-        value={filterText}
-        placeholder="Search..."
-        onChange={(e) => onFilterTextChange(e.target.value)}
-      />
-      <label>
-        <input
-          type="checkbox"
-          checked={inStockOnly}
-          onChange={(e) => onInStockOnlyChange(e.target.checked)}
-        />{" "}
-        Only show products in stock
-      </label>
-    </form>
   );
 }
 
