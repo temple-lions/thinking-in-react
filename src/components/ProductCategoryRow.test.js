@@ -8,7 +8,13 @@ describe("ProductCategoryRow Component", () => {
     const category = "Electronics";
 
     // Render the component with the defined category
-    render(<ProductCategoryRow category={category} />);
+    render(
+      <table>
+        <tbody>
+          <ProductCategoryRow category={category} />
+        </tbody>
+      </table>
+    );
 
     // Assert that the component renders with the correct category
     const categoryElement = screen.getByText(category);
